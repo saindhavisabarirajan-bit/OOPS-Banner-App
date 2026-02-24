@@ -1,11 +1,17 @@
 /**
  * OOPSBannerApp
- * UC1: Printing "OOPS" literal to console.
+ * UC2: Displaying "OOPS" as a 7-line asterisk banner.
  * @author YourName
- * @version 1.0
+ * @version 2.0
  */
 public class OOPSBannerApp {
     public static void main(String[] args) {
-        System.out.println("OOPS");
+        System.out.println(" ***** ***** ***** **** ");
+        System.out.println("* * * * * * * ");
+        System.out.println("* * * * * * *** ");
+        System.out.println("* * * * ***** * ");
+        System.out.println("* * * * * * ");
+        System.out.println("* * * * * * * ");
+        System.out.println(" ***** ***** * **** ");
     }
 }
