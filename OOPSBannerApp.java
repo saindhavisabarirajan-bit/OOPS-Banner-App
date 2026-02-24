@@ -1,21 +1,21 @@
 /**
  * OOPSBannerApp
- * UC4: Using String Arrays and Loops for better modularity.
+ * UC5: Compact Array Initialization with String.join()
  * @author YourName
- * @version 4.0
+ * @version 5.0
  */
 public class OOPSBannerApp {
     public static void main(String[] args) {
-        // Define the banner lines in a String array
+        // Combining declaration and initialization into one concise block
         String[] banner = {
             String.join("", "  *** ", " *** ", "**** ", "**** "),
-            String.join("", " * * ", "* * ", "* * ", "* "),
-            String.join("", " * * ", "* * ", "**** ", " *** "),
-            String.join("", " * * ", "* * ", "* ", "    *"),
-            String.join("", "  *** ", " *** ", "* ", "**** ")
+            String.join("", " * *", "* *", "P   *", "S    "),
+            String.join("", " * *", "* *", "PPPP ", " *** "),
+            String.join("", " * *", "* *", "P    ", "    *"),
+            String.join("", "  *** ", " *** ", "P    ", "**** ")
         };
 
-        // Use an enhanced for-loop to print the array
+        // Enhanced for-loop remains for clean output
         for (String line : banner) {
             System.out.println(line);
         }
