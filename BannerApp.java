@@ -1,17 +1,38 @@
 public class BannerApp {
+public class BannerApp {
+
+    // UC7: Encapsulating Character data in a Static Inner Class
+    static class CharacterPattern {
+        private String[] pattern;
+
+        // Constructor to set the ASCII array
+        public CharacterPattern(String[] pattern) {
+            this.pattern = pattern;
+        }
+
+        // Getter to retrieve the pattern
+        public String[] getPattern() {
+            return this.pattern;
+        }
+    }
+
     public static void main(String[] args) {
-        String[][] banner = { getLetterO(), getLetterO(), getLetterP(), getLetterS() };
+        // Initializing Objects (Separation of Data and Logic)
+        CharacterPattern charO = new CharacterPattern(new String[]{"  *** ", " * * ", " * * ", " * * ", "  *** "});
+        CharacterPattern charP = new CharacterPattern(new String[]{" **** ", " * * ", " **** ", " * ", " * "});
+        CharacterPattern charS = new CharacterPattern(new String[]{"  **** ", " * ", "  *** ", "     * ", " **** "});
+
+        // Building the banner by accessing Object properties
+        String[][] banner = {
+            charO.getPattern(),
+            charO.getPattern(),
+            charP.getPattern(),
+            charS.getPattern()
+        };
+
         render(banner);
     }
-    public static String[] getLetterO() {
-        return new String[]{"  *** ", " * * ", " * * ", " * * ", "  *** "};
-    }
-    public static String[] getLetterP() {
-        return new String[]{" **** ", " * * ", " **** ", " * ", " * "};
-    }
-    public static String[] getLetterS() {
-        return new String[]{"  **** ", " * ", "  *** ", "     * ", " **** "};
-    }
+
     public static void render(String[][] banner) {
         for (int i = 0; i < 5; i++) {
             for (String[] letter : banner) {
@@ -21,7 +42,4 @@ public class BannerApp {
         }
     }
 }
-
-
-
 
