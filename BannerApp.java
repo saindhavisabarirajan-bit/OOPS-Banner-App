@@ -1,35 +1,20 @@
 public class BannerApp {
+copy con BannerApp.java
 public class BannerApp {
-
     // UC7: Encapsulating Character data in a Static Inner Class
     static class CharacterPattern {
-        private String[] pattern;
-
-        // Constructor to set the ASCII array
-        public CharacterPattern(String[] pattern) {
-            this.pattern = pattern;
-        }
-
-        // Getter to retrieve the pattern
-        public String[] getPattern() {
-            return this.pattern;
-        }
+        private String[] lines;
+        public CharacterPattern(String[] lines) { this.lines = lines; }
+        public String[] getLines() { return this.lines; }
     }
 
     public static void main(String[] args) {
-        // Initializing Objects (Separation of Data and Logic)
-        CharacterPattern charO = new CharacterPattern(new String[]{"  *** ", " * * ", " * * ", " * * ", "  *** "});
-        CharacterPattern charP = new CharacterPattern(new String[]{" **** ", " * * ", " **** ", " * ", " * "});
-        CharacterPattern charS = new CharacterPattern(new String[]{"  **** ", " * ", "  *** ", "     * ", " **** "});
+        // Initializing objects (Encapsulation)
+        CharacterPattern o = new CharacterPattern(new String[]{"  *** ", " * * ", " * * ", " * * ", "  *** "});
+        CharacterPattern p = new CharacterPattern(new String[]{" **** ", " * * ", " **** ", " * ", " * "});
+        CharacterPattern s = new CharacterPattern(new String[]{"  **** ", " * ", "  *** ", "     * ", " **** "});
 
-        // Building the banner by accessing Object properties
-        String[][] banner = {
-            charO.getPattern(),
-            charO.getPattern(),
-            charP.getPattern(),
-            charS.getPattern()
-        };
-
+        String[][] banner = { o.getLines(), o.getLines(), p.getLines(), s.getLines() };
         render(banner);
     }
 
@@ -42,4 +27,4 @@ public class BannerApp {
         }
     }
 }
-
+^Z
